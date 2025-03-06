@@ -3,19 +3,62 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+    --gray-800: #1F1F1F;
+    --gray-300: #E4E4E4;
+    --gray-100: #F7F7F7;
+    --white: #FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --green: #AFEA0D;
+    --green-light: #F2FCDB;
+
+    --text-white: #FFFFFF;
+    --text-gray-800: #1F1F1F;
+    --text-gray-300: #E4E4E4;
+    --text-gray-100: #F7F7F7;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-white);
+    background: var(--gray-800);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, input, textarea, select, button {
+    font: 400, 1rem sans-serif;
+}
+
+a {
+    color: inherit;
+    text-rendering: none;
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+button {
+    background-color: var(--green);
+    color: var(--text-gray-800);
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 10px 8px;
+}
+
+button:hover {
+    opacity: .85;
+}
+
+input, textarea, select {
+    color: var(--text-gray-800);
+    background-color: var(--text-gray-100);
+    border-radius: 4px;
+    padding: 10px 8px;
 }
