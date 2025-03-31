@@ -45,7 +45,7 @@ export default function Home() {
 			<Image
 				src={logoImage}
 				alt="logo buccaneer burger"
-                className="w-[19rem] sm:w-[24rem] md:w-[28rem]"
+                className="w-[18rem] sm:w-[22rem] md:w-[26rem] mb-6"
 			/>
 		
 			<section className="w-[260px] sm:w-[320px] md:w-[400px]">

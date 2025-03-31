@@ -86,9 +86,9 @@ export default function OrderDetailModal({ order, onClose }: ModalOrderProps) {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
-            <div className="bg-white rounded-lg w-[600px] p-4 relative">
+            <div className="bg-gray-300 rounded-lg w-[600px] p-4 relative">
                 <button
-                    className="absolute top-2 right-2 bg-transparent"
+                    className="text-background absolute top-2 right-2 bg-transparent"
                     onClick={onClose}
                 >
                     <X />
@@ -96,7 +96,7 @@ export default function OrderDetailModal({ order, onClose }: ModalOrderProps) {
                 <section className="">
                     <div className="mb-6 text-gray-800">
                         <p className="text-lg font-bold mb-2">Detalhes do pedido</p>
-                        <span className="border bg-green-primary p-2 rounded-md text-sm font-semibold">Mesa {order.table}</span>
+                        <span className="border bg-orange-primary p-2 rounded-md text-sm font-semibold">Mesa {order.table}</span>
                     </div>
                 </section>
 

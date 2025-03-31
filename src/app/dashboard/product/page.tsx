@@ -16,7 +16,7 @@ export default async function Product() {
             <div className="max-w-3xl mx-auto px-4">
                 <div className="flex items-center gap-2 mb-2">
                     <p className="text-xl font-bold">Novo produto</p>
-                    <PlusCircleIcon size={22} className="text-green-primary" /> 
+                    <PlusCircleIcon size={22} className="text-orange-primary" /> 
                 </div>
 
                 <CreateProductForm categories={response.data} />

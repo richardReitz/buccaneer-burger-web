@@ -35,7 +35,7 @@ export default function Orders({ ordersList }: { ordersList: Order[] }) {
                 <div className="w-full">
                     <div className="flex items-center gap-1 mb-2">
                         <p className="text-xl font-bold">Últimos pedidos</p>
-                        <button onClick={handleRefresh} type="button" className="bg-transparent text-green-primary">
+                        <button onClick={handleRefresh} type="button" className="bg-transparent text-orange-primary">
                             <RefreshCcw size={22} /> 
                         </button>
                     </div>

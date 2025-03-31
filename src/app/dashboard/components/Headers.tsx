@@ -22,7 +22,7 @@ export default function Header() {
                     <Image
                         src={logoImage}
                         alt="logo buccaneer burger"
-                        className="w-[8rem] sm:w-[10rem] md:w-[12rem]"
+                        className="w-[6rem] sm:w-[8rem] md:w-[10rem]"
                         priority
                     />
                 </Link>

@@ -4,12 +4,16 @@
 
 :root {
     --gray-800: #1F1F1F;
+    --gray-700: rgb(83 82 82);
     --gray-300: #E4E4E4;
     --gray-100: #F7F7F7;
     --white: #FFFFFF;
 
     --green: #AFEA0D;
     --green-light: #F2FCDB;
+
+    --orange: rgb(231 129 40);
+    --bg-gray: rgb(39 38 37);
 
     --text-white: #FFFFFF;
     --text-gray-800: #1F1F1F;
@@ -45,8 +49,8 @@ a {
 }
 
 button {
-    background-color: var(--green);
-    color: var(--text-gray-800);
+    background-color: var(--orange);
+    color: var(--white);
     font-weight: 600;
     border-radius: 4px;
     padding: 10px 8px;
@@ -57,8 +61,15 @@ button:hover {
 }
 
 input, textarea, select {
-    color: var(--text-gray-800);
-    background-color: var(--text-gray-100);
+    color: var(--white);
+    background-color: var(--gray-700);
     border-radius: 4px;
     padding: 10px 8px;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    color: var(--gray-300);
+    opacity: 1;
 }

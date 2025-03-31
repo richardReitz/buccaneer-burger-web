@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: "Buccaneer Burger - Hamburgueria",
-    description: "O melhor hambuguer do alto mar",
+    description: "O melhor hamburguer do alto mar",
 };
 
 export default function RootLayout({
