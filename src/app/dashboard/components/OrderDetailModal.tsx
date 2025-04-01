@@ -75,28 +75,32 @@ export default function OrderDetailModal({ order, onClose }: ModalOrderProps) {
     },[initialized])
 
     const ProductItem = ({ product, index }: { product: ProductOrder, index: number }) => 
-        <section key={product.id} className="flex flex-col mb-2">
-            <span className="text-gray-800 text-base">
-                Qnt.: {index + 1} - <b>{product.name}</b> - R${Number(product.price).toFixed(2).replace('.', ',')}
-            </span>
-            {!!product?.description &&
-                <span className="text-gray-500 text-xs font-light">Descrição: {product.description}</span>
-            }
+        <section key={product.id} className="flex flex-col mb-2 border rounded-lg p-2 gap-1">
+            <div className="flex items-center justify-between">
+                <span className="text-white text-base">
+                   {index + 1}x - <b>{product.name}</b>
+                </span>
+                <span className="text-white text-sm">
+                    R$ {Number(product.price).toFixed(2).replace('.', ',')}
+                </span>
+            </div>
         </section>
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
-            <div className="bg-gray-300 rounded-lg w-[600px] p-4 relative">
+            <div className="bg-gray-700 rounded-lg w-[600px] p-4 relative">
                 <button
-                    className="text-background absolute top-2 right-2 bg-transparent"
+                    className="text-white absolute top-2 right-2 bg-transparent"
                     onClick={onClose}
                 >
                     <X />
                 </button>
                 <section className="">
                     <div className="mb-6 text-gray-800">
-                        <p className="text-lg font-bold mb-2">Detalhes do pedido</p>
-                        <span className="border bg-orange-primary p-2 rounded-md text-sm font-semibold">Mesa {order.table}</span>
+                        <p className="text-lg font-bold mb-2 text-white">Detalhes do pedido</p>
+                        <span className="border p-2 rounded-md text-sm font-semibold text-white">
+                            Mesa {order.table}
+                        </span>
                     </div>
                 </section>
 
