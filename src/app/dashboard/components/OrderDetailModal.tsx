@@ -74,11 +74,11 @@ export default function OrderDetailModal({ order, onClose }: ModalOrderProps) {
         }
     },[initialized])
 
-    const ProductItem = ({ product, index }: { product: ProductOrder, index: number }) => 
+    const ProductItem = ({ product }: { product: ProductOrder, index: number }) => 
         <section key={product.id} className="flex flex-col mb-2 border rounded-lg p-2 gap-1">
             <div className="flex items-center justify-between">
                 <span className="text-white text-base">
-                   {index + 1}x - <b>{product.name}</b>
+                   {product.quantity}x - <b>{product.name}</b>
                 </span>
                 <span className="text-white text-sm">
                     R$ {Number(product.price).toFixed(2).replace('.', ',')}
@@ -106,8 +106,8 @@ export default function OrderDetailModal({ order, onClose }: ModalOrderProps) {
 
                 {!!orderDetail.length ?
                     <>
-                        {orderDetail.map(({ product }, index) => 
-                            <ProductItem key={product.id} index={index} product={product} />
+                        {orderDetail.map(({ product, amount }, index) => 
+                            <ProductItem key={product.id} index={index} product={{ ...product, quantity: amount } } />
                         )}
                         <form onSubmit={handleFinishOrder} className="mt-6">
                             <Button type="submit">

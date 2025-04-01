@@ -16,6 +16,7 @@ export type ProductOrder = {
     category_id: string
     banner?: string
     created_at: string
+    quantity?: number
 }
 
 export type OrderItem = {
