@@ -18,11 +18,32 @@ async function getOrders() {
     }
 }
 
+async function getFinishedOrders() {
+    "use server"
+    
+    try {
+        const token = await getCookieServer()
+        const { data } = await api.get("/orders/finish", {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+
+        return data || []
+    } catch (err) {
+        console.log(err)
+        return []
+    }
+}
+
 export default async function Dashboard() {
     const ordersList = await getOrders()
     return (
         <>
-            <Orders ordersList={ordersList} />
+            <Orders
+                ordersList={ordersList}
+                getFinishedOrders={getFinishedOrders}
+            />
         </>
     )
 }

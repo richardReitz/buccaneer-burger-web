@@ -97,7 +97,7 @@ export default function OrderDetailModal({ order, onClose }: ModalOrderProps) {
                 </button>
                 <section className="">
                     <div className="mb-6 text-gray-800">
-                        <p className="text-lg font-bold mb-2 text-white">Detalhes do pedido</p>
+                        <p className="text-lg font-bold mb-6 text-white">Detalhes do pedido</p>
                         <span className="border p-2 rounded-md text-sm font-semibold text-white">
                             Mesa {order.table}
                         </span>
@@ -110,12 +110,21 @@ export default function OrderDetailModal({ order, onClose }: ModalOrderProps) {
                             <ProductItem key={product.id} index={index} product={{ ...product, quantity: amount } } />
                         )}
                         <form onSubmit={handleFinishOrder} className="mt-6">
-                            <Button type="submit">
-                                <div className="flex items-center gap-1 text-xs p-2">
-                                    Concluir pedido
+                            {order.status ?
+                                <div className="flex items-center gap-2">
+                                    <p>
+                                        Pedido finalizado
+                                    </p>
                                     <Check size={18} />
                                 </div>
-                            </Button>
+                            :
+                                <Button type="submit">
+                                    <div className="flex items-center gap-1 text-xs p-2">
+                                        Concluir pedido
+                                        <Check size={18} />
+                                    </div>
+                                </Button>
+                            }
                         </form>
                     </>
                 :
