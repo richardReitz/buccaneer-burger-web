@@ -57,7 +57,7 @@ export default function Orders({ ordersList, getFinishedOrders }: Props) {
 
     return (
         <>
-            <main className="mt-4 max-w-3xl mx-auto px-6 md:px-4">
+            <main className="mt-8 max-w-3xl mx-auto px-6 md:px-4">
                 <div className="w-full">
                     <div className="flex items-center gap-1 mb-1">
                         <p className="text-xl font-bold">Últimos pedidos</p>

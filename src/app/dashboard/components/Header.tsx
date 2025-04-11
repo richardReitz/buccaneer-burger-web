@@ -38,10 +38,13 @@ export default function Header() {
 
     const NavMenu = (): React.JSX.Element =>
         <nav ref={dropdownRef} className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
-            <Link href="/dashboard/category" className="hover:text-gray-300 text-sm sm:text-base p-2 sm:p-0" onClick={closeMenu}>
+            <Link href="/dashboard" className="hover:text-gray-300 text-sm p-2 sm:p-0" onClick={closeMenu}>
+                Home
+            </Link>
+            <Link href="/dashboard/category" className="hover:text-gray-300 text-sm p-2 sm:p-0" onClick={closeMenu}>
                 Categorias
             </Link>
-            <Link href="/dashboard/product" className="hover:text-gray-300 text-sm sm:text-base p-2 sm:p-0" onClick={closeMenu}>
+            <Link href="/dashboard/product" className="hover:text-gray-300 text-sm p-2 sm:p-0" onClick={closeMenu}>
                 Produtos
             </Link>
             <form action={handleLogout}>
@@ -56,7 +59,7 @@ export default function Header() {
 
     return (
         <header className="w-full">
-            <div className="flex items-center justify-between max-w-3xl px-6 md:px-4 py-2 mx-auto" >
+            <div className="flex items-center justify-between max-w-3xl px-6 md:px-4 py-4 mx-auto" >
                 <Link href="/dashboard">
                     <Image
                         src={logoImage}
@@ -81,7 +84,7 @@ export default function Header() {
             {/* Menu mobile dropdown */}
             {isOpen && (
                 <div
-                    className="absolute right-4 bg-gray-700 rounded shadow-lg p-2 z-50 animate-fade-in"
+                    className="absolute right-6 bg-gray-700 rounded shadow-lg p-2 z-50 animate-fade-in"
                 >
                     <NavMenu />
                 </div>
