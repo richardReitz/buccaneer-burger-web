@@ -23,3 +23,9 @@ Sistema de pedidos de hamburgueria. A parte Web da aplicação é a interface pr
 - Histórico de pedidos para clientes
 
 - Painel administrativo para gerenciar pedidos
+
+
+## Demonstração
+
+https://github.com/user-attachments/assets/139808d2-9108-4930-a6f2-1da9138be3ca
+
