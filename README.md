@@ -1,6 +1,12 @@
-# BuccaneerBurger
+# BuccaneerBurger Web
 
-Sistema de pedidos de hamburgueria. A parte Web da aplicação tem como função gerenciamento de pedidos já realizados e toda a funcionalidade de criação e edição de produtos.
+Sistema de pedidos de hamburgueria. A parte Web da aplicação é a interface principal para gerenciamento dos pedidos e controle da operação. Suas funcionalidades incluem:
+
+- Recebimento dos pedidos enviados via aplicativo mobile
+- Finalização de pedidos
+- Cadastro e edição de categorias de produtos
+- Cadastro e edição de produtos do cardápio
+- Cadastro de usuários
 
  ## Tecnologias utilizadas
 - Next.js
